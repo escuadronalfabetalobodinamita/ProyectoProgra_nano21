@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="mGridMain">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0" colspan="4">
+     <layout class="QGridLayout" name="mGridTop">
+      <item row="1" column="0" colspan="2">
+       <layout class="QGridLayout" name="mGridDstPath">
+        <item row="0" column="0">
+         <widget class="QLabel" name="wLabelDstPath">
+          <property name="text">
+           <string>Destination Image</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="wLineDstPath">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="wBrowserDstPath">
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <layout class="QGridLayout" name="mGridSrcPath">
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="wLineSrcPath">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="wLabelSrcPath">
+          <property name="text">
+           <string>Source Image</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="wBrowserSrcPath">
+          <property name="text">
+           <string>Open</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0" colspan="4">
+     <layout class="QGridLayout" name="mGridMiddle">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="mGridLeft">
+        <item row="3" column="0">
+         <spacer name="mVSpace2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="mVSpace1">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="mGridFilter">
+          <item row="0" column="0">
+           <widget class="QLabel" name="wLabelFilter">
+            <property name="text">
+             <string>Filter</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QRadioButton" name="wSelectFilter3">
+            <property name="text">
+             <string>Sobel Operator</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mGroupFilter</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QRadioButton" name="wSelectFilter2">
+            <property name="text">
+             <string>Laplace Operator B</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mGroupFilter</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="wSelectFilter1">
+            <property name="text">
+             <string>Laplace Operator A</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mGroupFilter</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QRadioButton" name="wSelectFilter5">
+            <property name="text">
+             <string>Sharpening Mask</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mGroupFilter</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QRadioButton" name="wSelectFilter4">
+            <property name="text">
+             <string>Edge Detector</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mGroupFilter</string>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QGridLayout" name="mGridEncoding">
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="wSelectEncodingP2">
+            <property name="text">
+             <string>ASCII Mode</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mGroupEncoding</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QRadioButton" name="wSelectEncodingP5">
+            <property name="text">
+             <string>Raw Mode</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mGroupEncoding</string>
+            </attribute>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="wLabelEncoding">
+            <property name="text">
+             <string>Encoding</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QGridLayout" name="mGridOptions">
+          <item row="0" column="0">
+           <widget class="QLabel" name="wLabelOptions">
+            <property name="text">
+             <string>Options</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="wMarkOptionWhite">
+            <property name="text">
+             <string>Set white to 255</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="wMarkOptionInvert">
+            <property name="text">
+             <string>Invert grayscale</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0">
+         <spacer name="mVSpace3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <layout class="QGridLayout" name="mGridRight">
+        <item row="2" column="0">
+         <layout class="QGridLayout" name="mGridImage2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="wPictureTerm">
+            <property name="minimumSize">
+             <size>
+              <width>256</width>
+              <height>170</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>256</width>
+              <height>170</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Image2</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="mGridImage1">
+          <item row="0" column="0">
+           <widget class="QLabel" name="wPictureInit">
+            <property name="minimumSize">
+             <size>
+              <width>256</width>
+              <height>170</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>256</width>
+              <height>170</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Image1</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="23" column="0" colspan="4">
+     <layout class="QGridLayout" name="mGridBottom">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="mGridImage">
+        <item row="1" column="1">
+         <widget class="QLabel" name="wProgressState">
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <spacer name="mHSpace1">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="2">
+         <spacer name="mHSpace2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QProgressBar" name="wProgressBar">
+          <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QGridLayout" name="mGridCreate">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="wCreateImage">
+          <property name="minimumSize">
+           <size>
+            <width>102</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>102</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Create</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="wMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>396</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mMenuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="wActionCredits"/>
+   </widget>
+   <addaction name="mMenuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="wStatusBar"/>
+  <action name="wActionCredits">
+   <property name="text">
+    <string>Credits</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="mGroupEncoding"/>
+  <buttongroup name="mGroupFilter"/>
+ </buttongroups>
+</ui>
